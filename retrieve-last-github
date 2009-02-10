@@ -13,4 +13,4 @@ wget -O - http://github.com/thoughtworks/cruisecontrol.rb/tarball/master |tar -x
 
 tar -czf "cruisecontrolrb-$version.tgz" -C $tmp_dir .
 
-dch --newversion "$version-0" 'New upstream release'
+dch --newversion "$version-1" 'New upstream release'
