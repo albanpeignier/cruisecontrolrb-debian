@@ -1,16 +1,15 @@
 #!/bin/sh -e
 
-base_version=1.4.0
+base_version=1.3.0
 version="$base_version+git`date +%Y%m%d%H%M`"
 
 tmp_dir="/tmp/cruisecontrol.rb.git"
 sources_dir="$tmp_dir/cruisecontrolrb-$base_version"
 
 rm -rf $tmp_dir
-mkdir -p $tmp_dir
+mkdir -p $sources_dir
 
-git clone git://github.com/thoughtworks/cruisecontrol.rb.git $sources_dir
-rm -rf $sources_dir/.git
+wget -O - http://github.com/thoughtworks/cruisecontrol.rb/tarball/master |tar -xzf - --strip 1 -C $sources_dir
 
 tar -czf "cruisecontrolrb-$version.tgz" -C $tmp_dir .
 
