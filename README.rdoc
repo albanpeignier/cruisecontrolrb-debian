@@ -1,0 +1,43 @@
+= CruiseControl.rb for Debian/Ubuntu
+
+* http://github.com/albanpeignier/cruisecontrolrb-debian/
+
+== DESCRIPTION:
+
+Debian/Ubuntu packaging for CruiseControl.rb
+
+== INSTALL:
+
+Add http://debian.tryphon.org to your sources.list:
+
+  deb http://debian.tryphon.org unstable main contrib
+
+Update and install package:
+ 
+  sudo apt-get update
+  sudo apt-get install cruisecontrolrb
+
+Configure your instance into /etc/cruisecontrolrb/site_config.rb
+
+Restart the CruiseControl.rb daemon:
+
+  /etc/init.d/cruisecontrolrb restart
+
+Add your first project:
+
+  sudo /usr/sbin/cruisecontrolrb add skyline \
+    --source-control git \
+    --repository git://github.com/albanpeignier/skyline.git 
+
+Visit the CruiseControl.rb dashboard on http://localhost:3333
+
+== BUILD PACKAGE:
+
+To create your own package:
+
+  git clone git://github.com/albanpeignier/cruisecontrolrb-debian.git
+  
+  cd cruisecontrolrb-debian
+  ./retrieve-last-github
+  fakeroot debian/rules binary
+
