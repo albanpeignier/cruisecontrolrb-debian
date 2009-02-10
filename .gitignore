@@ -1,1 +1,8 @@
 cruisecontrolrb-*
+
+debian/cruisecontrolrb.debhelper.log
+debian/cruisecontrolrb.*.debhelper
+debian/cruisecontrolrb/
+debian/files
+debian/patches/*.log
+debian/stamp-*
