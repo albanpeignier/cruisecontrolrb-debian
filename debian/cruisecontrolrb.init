@@ -22,12 +22,13 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/var/lib/gems/1.8/bin/
 CCRBDIR=/var/lib/cruisecontrolrb
 DESC="Continous Integration"
 NAME=cruisecontrolrb
-DAEMON_ARGS="start -d"
 SCRIPTNAME=/etc/init.d/$NAME
 CCRBUSER="ccontrolrb"
 
 # Read configuration variable file if it is present
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+DAEMON_ARGS="start -d $DAEMON_OPTS"
 
 EXTRAARGS="--chuid $CCRBUSER --chdir $CCRBDIR --quiet $EXTRAARGS"
 PIDFILE=$CCRBDIR/tmp/pids/mongrel.pid
