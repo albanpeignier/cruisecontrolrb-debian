@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: cruisecontrolrb
 Architecture: all
-Depends: ${shlibs:Depends}, ruby1.8
+Depends: ${shlibs:Depends}, ruby
 Description: a continuous integration tool. 
  Its basic purpose in life is to alert members of a software project 
  when one of them checks something into source control that breaks the build. 
