@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+# rules
+#
+# Alban Peignier <alban.peignier@free.fr>
+#
+# This software may be used and distributed according to the terms
+# of the GNU General Public License, incorporated herein by reference.
+#
+
+# DEB_AUTO_UPDATE_DEBIAN_CONTROL := yes
+include /usr/share/cdbs/1/class/makefile.mk
+DEB_UPSTREAM_VERSION := $(shell echo $(DEB_VERSION) | sed 's/-[^-]*//')
+# strip of a optionally added cvs patch (format: upstream+cvs-debian)
+DEB_UPSTREAM_TARBALL_VERSION := $(shell echo $(DEB_UPSTREAM_VERSION) | sed 's/+[^+]*//')
+DEB_TAR_SRCDIR := $(DEB_SOURCE_PACKAGE)-$(DEB_UPSTREAM_TARBALL_VERSION)
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+include /usr/share/cdbs/1/rules/tarball.mk
+
+DEB_MAKE_INSTALL_TARGET:=install DESTDIR=$(DEB_DESTDIR)
+DEB_MAKE_CLEAN_TARGET=
+
+configure/cruisecontrolrb::
+	cp debian/Makefile $(DEB_BUILDDIR)
+
+install/cruisecontrolrb::
+	install debian/cruisecontrolrb.sbin $(DEB_DESTDIR)/usr/sbin/cruisecontrolrb

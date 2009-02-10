@@ -1,0 +1,12 @@
+#!/bin/sh
+
+CCRBDIR=/var/lib/cruisecontrolrb
+CCRBUSER="ccontrolrb"
+
+[ -r /etc/default/cruisecontrolrb ] && . /etc/default/cruisecontrolrb
+
+export RAILS_ROOT=$CCRBDIR
+export CRUISE_DATA_ROOT=$CCRBDIR
+
+cd $CCRBDIR
+su $CCRBUSER -s /bin/sh -c "./cruise $*"

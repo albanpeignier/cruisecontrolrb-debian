@@ -1,0 +1,11 @@
+diff --git a/script/server b/script/server
+index 7651355..2d0de99 100755
+--- a/script/server
++++ b/script/server
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env ruby
+-require File.dirname(__FILE__) + '/../config/boot'
++require File.expand_path(File.dirname(__FILE__) + '/../config') + '/boot'
+ require 'builder_starter'
+ require 'optparse'
+ require 'fileutils'

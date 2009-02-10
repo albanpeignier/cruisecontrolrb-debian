@@ -1,0 +1,6 @@
+etc/cruisecontrolrb
+usr/sbin
+usr/share/cruisecontrolrb
+var/log/cruisecontrolrb
+var/lib/cruisecontrolrb/builds
+var/lib/cruisecontrolrb/public

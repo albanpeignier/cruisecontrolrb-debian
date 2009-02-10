@@ -1,0 +1,8 @@
+/usr/share/cruisecontrolrb/app /var/lib/cruisecontrolrb/app
+/usr/share/cruisecontrolrb/config /var/lib/cruisecontrolrb/config
+/usr/share/cruisecontrolrb/cruise /var/lib/cruisecontrolrb/cruise 
+/usr/share/cruisecontrolrb/lib /var/lib/cruisecontrolrb/lib
+/usr/share/cruisecontrolrb/script /var/lib/cruisecontrolrb/script
+/usr/share/cruisecontrolrb/tasks /var/lib/cruisecontrolrb/tasks
+/usr/share/cruisecontrolrb/vendor /var/lib/cruisecontrolrb/vendor
+/var/log/cruisecontrolrb /var/lib/cruisecontrolrb/log

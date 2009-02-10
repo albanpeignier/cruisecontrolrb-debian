@@ -1,0 +1,33 @@
+#!/bin/sh -e
+
+CCRBUSER="ccontrolrb"
+
+case "$1" in
+    configure)
+	      if ! id $CCRBUSER > /dev/null 2>&1 ; then
+	          adduser --system --home /var/lib/cruisecontrolrb --no-create-home \
+		            --ingroup nogroup --disabled-password --shell /bin/false \
+		            $CCRBUSER
+	      fi
+        
+        for directory in log/cruisecontrolrb lib/cruisecontrolrb lib/cruisecontrolrb/builds; do
+	          chown $CCRBUSER:adm /var/$directory
+	          chmod 755 /var/$directory
+        done
+
+        # create links in public:
+        ln -fs /usr/share/cruisecontrolrb/public/* \
+            /var/lib/cruisecontrolrb/builds \
+            /var/lib/cruisecontrolrb/public/
+        ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+    
+    *)
+	      echo "$0 called with unknown argument \`$1'" >&2
+	      exit 1
+        ;;
+esac
+
+#DEBHELPER#

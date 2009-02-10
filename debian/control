@@ -1,0 +1,16 @@
+Source: cruisecontrolrb
+Section: development
+Priority: optional
+Maintainer: Alban Peignier <alban.peignier@free.fr>
+Build-Depends: cdbs, debhelper
+Standards-Version: 3.7.2
+
+Package: cruisecontrolrb
+Architecture: all
+Depends: ${shlibs:Depends}, ruby1.8
+Description: a continuous integration tool. 
+ Its basic purpose in life is to alert members of a software project 
+ when one of them checks something into source control that breaks the build. 
+ .
+ See <http://cruisecontrolrb.thoughtworks.com/> for more info.
+
