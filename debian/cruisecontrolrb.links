@@ -6,3 +6,4 @@
 /usr/share/cruisecontrolrb/tasks /var/lib/cruisecontrolrb/tasks
 /usr/share/cruisecontrolrb/vendor /var/lib/cruisecontrolrb/vendor
 /var/log/cruisecontrolrb /var/lib/cruisecontrolrb/log
+/etc/cruisecontrolrb/site_config.rb /usr/share/cruisecontrolrb/config/site_config.rb
