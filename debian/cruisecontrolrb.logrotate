@@ -1,0 +1,14 @@
+/var/log/cruisecontrolrb/*.log {
+        daily
+        missingok
+        rotate 7
+        compress
+        create 640 ccontrolrb adm
+        sharedscripts
+        prerotate
+                /etc/init.d/cruisecontrolrb stop > /dev/null
+        endscript
+        postrotate
+                /etc/init.d/cruisecontrolrb start > /dev/null
+        endscript
+}
