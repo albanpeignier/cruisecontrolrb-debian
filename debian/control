@@ -1,5 +1,5 @@
 Source: cruisecontrolrb
-Section: development
+Section: contrib/devel
 Priority: optional
 Maintainer: Alban Peignier <alban.peignier@free.fr>
 Build-Depends: cdbs, debhelper
