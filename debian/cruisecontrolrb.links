@@ -1,3 +1,5 @@
+/etc/cruisecontrolrb/builder_plugins /var/lib/cruisecontrolrb/builder_plugins
+/etc/cruisecontrolrb/site_config.rb /usr/share/cruisecontrolrb/config/site_config.rb
 /usr/share/cruisecontrolrb/app /var/lib/cruisecontrolrb/app
 /usr/share/cruisecontrolrb/config /var/lib/cruisecontrolrb/config
 /usr/share/cruisecontrolrb/cruise /var/lib/cruisecontrolrb/cruise 
@@ -6,4 +8,3 @@
 /usr/share/cruisecontrolrb/tasks /var/lib/cruisecontrolrb/tasks
 /usr/share/cruisecontrolrb/vendor /var/lib/cruisecontrolrb/vendor
 /var/log/cruisecontrolrb /var/lib/cruisecontrolrb/log
-/etc/cruisecontrolrb/site_config.rb /usr/share/cruisecontrolrb/config/site_config.rb

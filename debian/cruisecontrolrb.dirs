@@ -1,4 +1,5 @@
 etc/cruisecontrolrb
+etc/cruisecontrolrb/builder_plugins
 usr/sbin
 usr/share/cruisecontrolrb
 var/log/cruisecontrolrb
