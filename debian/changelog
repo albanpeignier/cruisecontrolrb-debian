@@ -1,3 +1,9 @@
+cruisecontrolrb (1.3.0+git200902101935-3) unstable; urgency=low
+
+  * patch Build#rake to disable Test::Unit::AutoRunner
+
+ -- Alban Peignier <alban.peignier@free.fr>  Mon, 16 Feb 2009 12:07:50 +0100
+
 cruisecontrolrb (1.3.0+git200902101935-2) unstable; urgency=low
 
   * add builder_plugins in /etc/cruisecontrolrb/builder_plugins
