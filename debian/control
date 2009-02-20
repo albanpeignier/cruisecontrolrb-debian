@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: cruisecontrolrb
 Architecture: all
-Depends: ${shlibs:Depends}, adduser, ruby, rake
+Depends: ${shlibs:Depends}, adduser, mongrel, ruby, rake
 Recommends: subversion, git-core, mercurial
 Description: a continuous integration tool. 
  Its basic purpose in life is to alert members of a software project 
