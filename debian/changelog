@@ -1,3 +1,33 @@
+cruisecontrolrb (1.4.0-2~bpo50+1) lenny-backports; urgency=low
+
+  * Rebuild for lenny-backports.
+
+ -- Alban Peignier <alban.peignier@free.fr>  Wed, 26 Aug 2009 11:57:36 +0200
+
+cruisecontrolrb (1.4.0-2) unstable; urgency=low
+
+  * Add a patch to increase git revision number length
+
+ -- Alban Peignier <alban.peignier@free.fr>  Wed, 26 Aug 2009 11:50:38 +0200
+
+cruisecontrolrb (1.4.0-1~bpo50+1) lenny-backports; urgency=low
+
+  * Rebuild for lenny-backports.
+
+ -- Alban Peignier <alban.peignier@free.fr>  Wed, 19 Aug 2009 15:14:04 +0200
+
+cruisecontrolrb (1.4.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alban Peignier <alban.peignier@free.fr>  Tue, 18 Aug 2009 09:17:15 +0200
+
+cruisecontrolrb (1.3.0+git200902101935-5~bpo50+1) lenny-backports; urgency=low
+
+  * Rebuild for lenny-backports.
+
+ -- Alban Peignier <alban.peignier@free.fr>  Fri, 20 Feb 2009 20:19:10 +0100
+
 cruisecontrolrb (1.3.0+git200902101935-5) unstable; urgency=low
 
   * Fix site_config.rb link

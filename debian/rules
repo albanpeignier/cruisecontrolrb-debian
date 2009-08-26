@@ -12,7 +12,7 @@ include /usr/share/cdbs/1/class/makefile.mk
 DEB_UPSTREAM_VERSION := $(shell echo $(DEB_VERSION) | sed 's/-[^-]*//')
 # strip of a optionally added cvs patch (format: upstream+cvs-debian)
 DEB_UPSTREAM_TARBALL_VERSION := $(shell echo $(DEB_UPSTREAM_VERSION) | sed 's/+[^+]*//')
-DEB_TAR_SRCDIR := $(DEB_SOURCE_PACKAGE)-$(DEB_UPSTREAM_TARBALL_VERSION)
+DEB_TAR_SRCDIR := cruisecontrol-$(DEB_UPSTREAM_TARBALL_VERSION)
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/rules/simple-patchsys.mk
