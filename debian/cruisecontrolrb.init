@@ -31,8 +31,15 @@ CCRBUSER="ccontrolrb"
 DAEMON_ARGS="start -d $DAEMON_OPTS"
 
 EXTRAARGS="--chuid $CCRBUSER --chdir $CCRBDIR --quiet $EXTRAARGS"
-PIDFILE=$CCRBDIR/tmp/pids/mongrel.pid
-BUILDER_PIDS=$CCRBDIR/tmp/pids/builders
+
+PIDDIR=/var/run/cruisecontrolrb
+if [ ! -d $PIDDIR ]; then
+    mkdir $PIDDIR
+    chown $CCRBUSER $PIDDIR
+fi
+
+PIDFILE=$PIDDIR/server.pid
+BUILDER_PIDS=$PIDDIR/builders
 DAEMON=$CCRBDIR/cruise
 
 # Exit if the package is not installed

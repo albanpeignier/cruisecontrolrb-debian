@@ -5,3 +5,6 @@ usr/share/cruisecontrolrb
 var/log/cruisecontrolrb
 var/lib/cruisecontrolrb/builds
 var/lib/cruisecontrolrb/public
+var/lib/cruisecontrolrb/tmp/cache
+var/lib/cruisecontrolrb/tmp/sessions
+var/lib/cruisecontrolrb/tmp/sockets

@@ -10,7 +10,7 @@ case "$1" in
 		            $CCRBUSER
 	      fi
         
-        for directory in log/cruisecontrolrb lib/cruisecontrolrb lib/cruisecontrolrb/builds; do
+        for directory in log/cruisecontrolrb lib/cruisecontrolrb lib/cruisecontrolrb/builds lib/cruisecontrolrb/*; do
 	          chown $CCRBUSER:adm /var/$directory
 	          chmod 755 /var/$directory
         done

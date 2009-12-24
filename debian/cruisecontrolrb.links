@@ -8,3 +8,4 @@
 /usr/share/cruisecontrolrb/tasks /var/lib/cruisecontrolrb/tasks
 /usr/share/cruisecontrolrb/vendor /var/lib/cruisecontrolrb/vendor
 /var/log/cruisecontrolrb /var/lib/cruisecontrolrb/log
+/var/run/cruisecontrolrb /var/lib/cruisecontrolrb/tmp/pids
